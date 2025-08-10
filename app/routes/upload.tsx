@@ -7,6 +7,11 @@ import {convertPdfToImage} from "~/lib/pdf2img";
 import {generateUUID} from "~/lib/utils";
 import {prepareInstructions} from "~/constants";
 
+export const meta = () => ([
+    { title: 'Resumex | Upload ' },
+    { name: 'description', content: 'Upload your resume for a detailed overview' },
+])
+
 const Upload = () => {
     const { auth, isLoading, fs, ai, kv } = usePuterStore();
     const navigate = useNavigate();
